@@ -47,7 +47,7 @@ Accept: application/scim+json
 Content-Type: application/scim+json
 ```
 
-You can use [ngrok](https://ngrok.com/) "ngrok http 8081" to make server available online. use https://xxxxx.ngrok.io in Okta SCIM app or Runscope to test online.
+You can use [ngrok](https://ngrok.com/) "ngrok http 8080" to make server available online. use https://xxxxx.ngrok.io in Okta SCIM app or Runscope to test online.
 
 ## Using Postman
 
