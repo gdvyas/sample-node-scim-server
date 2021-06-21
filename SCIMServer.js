@@ -15,16 +15,14 @@
 
 let express = require('express');
 let app = express();
-let bodyParser = require('body-parser');
 let db = require('./core/Database');
 let out = require('./core/Logs');
 let cUsers = require('./components/Users');
 let cGroups = require('./components/Groups');
 
 app.use(express.static('public'));
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
-
+app.use(express.urlencoded());
+app.use(express.json({ type: "application/*+json" }));
 let port = process.env.PORT || 8080; // Support for Heroku
 
 /**
