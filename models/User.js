@@ -33,9 +33,9 @@ class User  {
         user["email"] = userJsonData["emails"][0]["value"];
 
         let groups = [];
-
-        for (let i = 0; i < userJsonData["groups"].length; i++) {
-            groups.push(this.parseGroups(userJsonData["groups"][i]));
+        const incomingGroups = userJsonData["groups"] || [];
+        for (let i = 0; i < incomingGroups.length; i++) {
+            groups.push(this.parseGroups(incomingGroups[i]));
         }
 
         user["groups"] = groups;
